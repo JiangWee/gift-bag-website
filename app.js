@@ -53,7 +53,7 @@ const submitBtn = document.getElementById('submitBtn');
 const formMessage = document.getElementById('formMessage');
 
 // Backend API configuration
-const API_BASE_URL = 'https://gift-shop-backend-vercel.onrender.com'; // Railway backend URL
+const API_BASE_URL = 'https://gift-shop-backend-production.up.railway.app'; // Railway backend URL
 
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
