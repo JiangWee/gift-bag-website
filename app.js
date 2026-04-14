@@ -54,6 +54,7 @@ const formMessage = document.getElementById('formMessage');
 
 // Backend API configuration
 const API_BASE_URL = 'https://gift-shop-backend-production.up.railway.app'; // Railway backend URL
+const GIFTBAG_API = `${API_BASE_URL}/api/giftbag`; // GiftBag B2B API
 
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -85,7 +86,7 @@ contactForm.addEventListener('submit', async (e) => {
     hideMessage();
     
     try {
-        const response = await fetch(`${API_BASE_URL}/api/contact/send`, {
+        const response = await fetch(`${GIFTBAG_API}/inquiry`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
